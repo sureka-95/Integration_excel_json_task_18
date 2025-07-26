@@ -1,0 +1,4 @@
+behave
+selenium
+python-dotenv
+allure-behave

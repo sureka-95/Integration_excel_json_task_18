@@ -1,0 +1,27 @@
+Feature: Login functionality for GuviZenClass portal # features/login.feature:6
+
+  Scenario: Successful Login                     # features/login.feature:8
+    Given I open the login page                  # features/steps/login_steps.py:23
+    When I enter valid credentials               # features/steps/login_steps.py:30
+    And I click the login button                 # features/steps/login_steps.py:51
+    Then I should be redirected to the dashboard # features/steps/login_steps.py:57
+
+  Scenario: Unsuccessful Login         # features/login.feature:14
+    Given I open the login page        # features/steps/login_steps.py:23
+    When I enter invalid credentials   # features/steps/login_steps.py:43
+    And I click the login button       # features/steps/login_steps.py:51
+    Then I should see an error message # features/steps/login_steps.py:70
+
+  Scenario: Validate Username and Password fields        # features/login.feature:20
+    Given I open the login page                          # features/steps/login_steps.py:23
+    Then I should see username and password input fields # features/steps/login_steps.py:85
+
+  Scenario: Validate Submit Button             # features/login.feature:24
+    Given I open the login page                # features/steps/login_steps.py:23
+    Then I should see the login button enabled # features/steps/login_steps.py:93
+
+  Scenario: Validate Logout Button Functionality  # features/login.feature:28
+    Given I am logged in with valid credentials   # features/steps/login_steps.py:99
+    When I click the logout button                # features/steps/login_steps.py:113
+    Then I should be redirected to the login page # features/steps/login_steps.py:124
+

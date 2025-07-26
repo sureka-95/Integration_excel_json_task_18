@@ -1,0 +1,64 @@
+<testsuite name="login.Login functionality for GuviZenClass portal" tests="5" errors="0" failures="0" skipped="0" time="26.136122" timestamp="2025-07-26T16:33:59.618246" hostname="SELVADD"><testcase classname="login.Login functionality for GuviZenClass portal" name="Successful Login" status="passed" time="6.472051"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Successful Login
+    Given I open the login page ... passed in 2.781s
+    When I enter valid credentials ... passed in 0.437s
+    And I click the login button ... passed in 3.206s
+    Then I should be redirected to the dashboard ... passed in 0.048s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Using username: surekavj@gmail.com
+
+]]>
+</system-out></testcase><testcase classname="login.Login functionality for GuviZenClass portal" name="Unsuccessful Login" status="passed" time="6.308231"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Unsuccessful Login
+    Given I open the login page ... passed in 2.667s
+    When I enter invalid credentials ... passed in 0.376s
+    And I click the login button ... passed in 3.206s
+    Then I should see an error message ... passed in 0.060s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login functionality for GuviZenClass portal" name="Validate Username and Password fields" status="passed" time="2.282279"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Validate Username and Password fields
+    Given I open the login page ... passed in 2.216s
+    Then I should see username and password input fields ... passed in 0.067s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login functionality for GuviZenClass portal" name="Validate Submit Button" status="passed" time="2.31304"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Validate Submit Button
+    Given I open the login page ... passed in 2.282s
+    Then I should see the login button enabled ... passed in 0.031s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="login.Login functionality for GuviZenClass portal" name="Validate Logout Button Functionality" status="passed" time="8.76052"><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Validate Logout Button Functionality
+    Given I am logged in with valid credentials ... passed in 7.417s
+    When I click the logout button ... passed in 1.305s
+    Then I should be redirected to the login page ... passed in 0.039s
+
+@scenario.end
+--------------------------------------------------------------------------------
+
+Captured stdout:
+Using username: surekavj@gmail.com
+
+]]>
+</system-out></testcase></testsuite>
